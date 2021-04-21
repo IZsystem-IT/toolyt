@@ -31,10 +31,31 @@ jobs:
 workflows:
   version: 2
 
-  constantly_build:
+  6h_rebuild:
     triggers:
       - schedule:
-          cron: "0 10 * * 2"
+          cron: " 7,10,16,22 * * 2"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+      - schedule:
+          cron: " 7,10,16,22 * * 2"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+      - schedule:
+          cron: " 7,10,16,22 * * 2"
+          filters:
+            branches:
+              only:
+                - main
+                - master
+      - schedule:
+          cron: " 7,10,16,22 * * 2"
           filters:
             branches:
               only:
